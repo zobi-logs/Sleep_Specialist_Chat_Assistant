@@ -14,8 +14,8 @@ Relevant sources are cited with every answer.
 
 ## Screenshots
 
-![Screenshot 1](images/01.png)  
-![Screenshot 2](images/02.png)  
+![Screenshot 1](images/01.PNG)  
+![Screenshot 2](images/02.PNG)  
 
 
 
