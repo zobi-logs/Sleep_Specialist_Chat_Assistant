@@ -3,9 +3,9 @@
 **Author:** Zubair Akbar
 
 A Streamlit-based RAG chatbot for personalized sleep recommendations, combining a FAISS vectorstore with the DeepSeek LLM API.
+![Screenshot 1](images/01.png)
+![Screenshot 2](images/02.png)
 
-<img src="./images/01.png" alt="Screenshot 1" width="300"/>  
-<img src="./images/02.png" alt="Screenshot 2" width="300"/>
 
 ## 🚀 Features
 
@@ -15,18 +15,7 @@ A Streamlit-based RAG chatbot for personalized sleep recommendations, combining 
 
 ## 📂 Project Structure
 
-Sleep_Specialist_Chat_Assistant/
-├── faiss_db/ # prebuilt FAISS vectorstore
-├── images/ # UI screenshots
-│ ├── 01.png
-│ └── 02.png
-├── app.py # main Streamlit RAG chatbot
-├── app_local.py # local‐only variant (no RAG)
-├── create_faiss_db.py # script to build your FAISS db
-├── extract_pdf.py # PDF ingestion into FAISS
-├── icd11_full_20250331.xlsx # source data
-├── icd11_sleep.py # sleep‐specific ingestion
-└── Requirements.txt # Python dependencies
+<pre markdown> ```text Sleep_Specialist_Chat_Assistant/ ├── faiss_db/ ├── images/ │ ├── 01.png │ └── 02.png ├── app.py ├── app_local.py ├── create_faiss_db.py ├── extract_pdf.py ├── icd11_full_20250331.xlsx ├── icd11_sleep.py └── Requirements.txt ``` </pre>
 ## ⚙️ Installation
 
 1. **Clone this repo**  
