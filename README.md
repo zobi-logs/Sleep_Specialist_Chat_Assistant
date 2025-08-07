@@ -1,35 +1,58 @@
-# ğŸ›Œ Sleep Specialist Chat Assistant
+Sleep_Specialist_Chat_Assistant/>
+ÃÄÄ faiss_db/                    # prebuilt FAISS vectorstore
+ÃÄÄ images/                      # UI screenshots
+|   ÃÄÄ 01.png
+|   ÀÄÄ 02.png
+ÃÄÄ app.py                       # main Streamlit RAG chatbot
+ÃÄÄ app_local.py                 # local-only variant (no RAG)
+ÃÄÄ create_faiss_db.py           # build the FAISS DB
+ÃÄÄ extract_pdf.py               # ingest PDFs into FAISS
+ÃÄÄ icd11_full_20250331.xlsx     # source data
+ÃÄÄ icd11_sleep.py               # sleep-specific ingestion
+ÀÄÄ Requirements.txt             # Python dependencies
+```
 
-**Author:** Zubair Akbar
-
-A Streamlit-based RAG chatbot for personalized sleep recommendations, combining a FAISS vectorstore with the DeepSeek LLM API.
-![Screenshot 1](images/01.png)
-![Screenshot 2](images/02.png)
-
-
-## ğŸš€ Features
-
-- **Retrieval-Augmented Generation** using FAISS + DeepSeek  
-- **Streamlit UI**: simple chat interface with source citations  
-- Easy local or cloud deployment  
-
-## ğŸ“‚ Project Structure
-
-<pre markdown> ```text Sleep_Specialist_Chat_Assistant/ â”œâ”€â”€ faiss_db/ â”œâ”€â”€ images/ â”‚ â”œâ”€â”€ 01.png â”‚ â””â”€â”€ 02.png â”œâ”€â”€ app.py â”œâ”€â”€ app_local.py â”œâ”€â”€ create_faiss_db.py â”œâ”€â”€ extract_pdf.py â”œâ”€â”€ icd11_full_20250331.xlsx â”œâ”€â”€ icd11_sleep.py â””â”€â”€ Requirements.txt ``` </pre>
-## âš™ï¸ Installation
+## ?? Installation
 
 1. **Clone this repo**  
-   ```bash
-   git clone https://github.com/<your-username>/Sleep_Specialist_Chat_Assistant.git
-   cd Sleep_Specialist_Chat_Assistant
+
+```bash
+git clone https://github.com/zobi-logs/Sleep_Specialist_Chat_Assistant.git
+cd Sleep_Specialist_Chat_Assistant
+```
+
+
+```bash
 python -m venv .venv
-source .venv/bin/activate    # Linux/macOS
-.venv\Scripts\activate       # Windows
+REM Linux/macOS:
+source .venv/bin/activate
+REM Windows:
+.venv\Scripts\activate
+```
+
+3. **Install dependencies**  
+
+```bash
 pip install -r Requirements.txt
+```
+
+4. **Build (or load) your FAISS database**  
+
+```bash
 python create_faiss_db.py --input pdfs/ --output faiss_db
+```
 
+5. **Set your DeepSeek API key**  
+In `app.py`, replace:
+```python
+DEEPSEEK_API_KEY = "^<YOUR_API_KEY^>" 
+```
 
-DEEPSEEK_API_KEY = "YOUR_API_KEY"
+## ?? Run
+
+```bash
 streamlit run app.py
+```
 
-Note PDF data(Books/Research papers) are not included.  
+> **Note:** PDF data (books/research papers) are not included in this repository.
+
